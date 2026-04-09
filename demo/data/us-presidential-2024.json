@@ -1,0 +1,1037 @@
+﻿{
+    "format":  "leaflet.us-states/standard-usage",
+    "version":  1,
+    "notes":  "Demo dataset for election UI. Labels are intentionally omitted so map zoom labeling controls always win.",
+    "states":  {
+                   "AL":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  9,
+                              "totalVotes":  4770000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  52.9,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  2523330,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  47.1,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  2246670,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "AK":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  3,
+                              "totalVotes":  1590000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  52.8,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  839520,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  47.2,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  750480,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "AZ":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  11,
+                              "totalVotes":  5830000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  51.3,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  2990790,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  48.7,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  2839210,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "AR":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  6,
+                              "totalVotes":  3180000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  53.5,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  1701300,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  46.5,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  1478700,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "CA":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  54,
+                              "totalVotes":  28620000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  51.7,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  14796540,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  48.3,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  13823460,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "CO":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  10,
+                              "totalVotes":  5300000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  53.1,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  2814300,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  46.9,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  2485700,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "CT":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  7,
+                              "totalVotes":  3710000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  50.6,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  1877260,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  49.4,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  1832740,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "DE":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  3,
+                              "totalVotes":  1590000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  52.2,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  829980,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  47.8,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  760020,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "DC":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  3,
+                              "totalVotes":  1590000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  52,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  826800,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  48,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  763200,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "FL":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  30,
+                              "totalVotes":  15900000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  53.4,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  8490600,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  46.6,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  7409400,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ],
+                              "stateFacts":  {
+                                                 "population":  "22.6M",
+                                                 "nickname":  "The Sunshine State",
+                                                 "capital":  "Tallahassee"
+                                             }
+                          },
+                   "GA":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  16,
+                              "totalVotes":  8480000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  52.4,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  4443520,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  47.6,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  4036480,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ],
+                              "stateFacts":  {
+                                                 "population":  "11.0M",
+                                                 "nickname":  "The Peach State",
+                                                 "capital":  "Atlanta"
+                                             }
+                          },
+                   "HI":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  4,
+                              "totalVotes":  2120000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  53,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  1123600,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  47,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  996400,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "ID":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  4,
+                              "totalVotes":  2120000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  52.9,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  1121480,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  47.1,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  998520,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "IL":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  19,
+                              "totalVotes":  10070000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  53.4,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  5377380,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  46.6,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  4692620,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "IN":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  11,
+                              "totalVotes":  5830000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  50.9,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  2967470,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  49.1,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  2862530,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "IA":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  6,
+                              "totalVotes":  3180000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  52.6,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  1672680,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  47.4,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  1507320,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "KS":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  6,
+                              "totalVotes":  3180000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  51.6,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  1640880,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  48.4,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  1539120,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "KY":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  8,
+                              "totalVotes":  4240000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  52.2,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  2213280,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  47.8,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  2026720,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "LA":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  8,
+                              "totalVotes":  4240000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  52.9,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  2242960,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  47.1,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  1997040,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "ME":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  4,
+                              "totalVotes":  2120000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  53.1,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  1125720,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  46.9,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  994280,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "MD":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  10,
+                              "totalVotes":  5300000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  53,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  2809000,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  47,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  2491000,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "MA":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  11,
+                              "totalVotes":  5830000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  52.7,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  3072410,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  47.3,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  2757590,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "MI":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  15,
+                              "totalVotes":  7950000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  50.8,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  4038600,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  49.2,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  3911400,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "MN":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  10,
+                              "totalVotes":  5300000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  51,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  2703000,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  49,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  2597000,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "MS":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  6,
+                              "totalVotes":  3180000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  51.8,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  1647240,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  48.2,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  1532760,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "MO":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  10,
+                              "totalVotes":  5300000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  51.4,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  2724200,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  48.6,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  2575800,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "MT":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  4,
+                              "totalVotes":  2120000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  51.9,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  1100280,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  48.1,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  1019720,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "NE":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  5,
+                              "totalVotes":  2650000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  53.5,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  1417750,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  46.5,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  1232250,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "NV":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  6,
+                              "totalVotes":  3180000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  52.2,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  1659960,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  47.8,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  1520040,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "NH":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  4,
+                              "totalVotes":  2120000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  50.5,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  1070600,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  49.5,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  1049400,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "NJ":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  14,
+                              "totalVotes":  7420000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  50.7,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  3761940,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  49.3,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  3658060,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "NM":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  5,
+                              "totalVotes":  2650000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  51,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  1351500,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  49,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  1298500,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "NY":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  28,
+                              "totalVotes":  14840000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  52.2,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  7746480,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  47.8,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  7093520,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "NC":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  16,
+                              "totalVotes":  8480000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  53.3,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  4519840,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  46.7,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  3960160,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "ND":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  3,
+                              "totalVotes":  1590000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  53.4,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  849060,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  46.6,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  740940,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "OH":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  17,
+                              "totalVotes":  9010000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  50.9,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  4586090,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  49.1,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  4423910,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "OK":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  7,
+                              "totalVotes":  3710000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  51.2,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  1899520,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  48.8,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  1810480,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "OR":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  8,
+                              "totalVotes":  4240000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  51.6,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  2187840,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  48.4,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  2052160,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "PA":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  19,
+                              "totalVotes":  10070000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  53.3,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  5367310,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  46.7,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  4702690,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "RI":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  4,
+                              "totalVotes":  2120000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  51,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  1081200,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  49,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  1038800,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "SC":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  9,
+                              "totalVotes":  4770000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  50.8,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  2423160,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  49.2,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  2346840,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "SD":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  3,
+                              "totalVotes":  1590000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  50.9,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  809310,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  49.1,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  780690,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "TN":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  11,
+                              "totalVotes":  5830000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  52,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  3031600,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  48,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  2798400,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "TX":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  40,
+                              "totalVotes":  21200000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  53,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  11236000,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  47,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  9964000,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "UT":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  6,
+                              "totalVotes":  3180000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  52.7,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  1675860,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  47.3,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  1504140,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "VT":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  3,
+                              "totalVotes":  1590000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  52.5,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  834750,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  47.5,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  755250,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "VA":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  13,
+                              "totalVotes":  6890000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  50.6,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  3486340,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  49.4,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  3403660,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "WA":  {
+                              "winner":  "Kamala Harris",
+                              "party":  "Democratic",
+                              "electoralVotes":  12,
+                              "totalVotes":  6360000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  50.7,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  3224520,
+                                                     "party":  "Democratic"
+                                                 },
+                                                 {
+                                                     "pct":  49.3,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  3135480,
+                                                     "party":  "Republican"
+                                                 }
+                                             ]
+                          },
+                   "WV":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  4,
+                              "totalVotes":  2120000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  53.1,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  1125720,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  46.9,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  994280,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "WI":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  10,
+                              "totalVotes":  5300000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  51.8,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  2745400,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  48.2,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  2554600,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          },
+                   "WY":  {
+                              "winner":  "Donald Trump",
+                              "party":  "Republican",
+                              "electoralVotes":  3,
+                              "totalVotes":  1590000,
+                              "candidates":  [
+                                                 {
+                                                     "pct":  53.4,
+                                                     "name":  "Donald Trump",
+                                                     "votes":  849060,
+                                                     "party":  "Republican"
+                                                 },
+                                                 {
+                                                     "pct":  46.6,
+                                                     "name":  "Kamala Harris",
+                                                     "votes":  740940,
+                                                     "party":  "Democratic"
+                                                 }
+                                             ]
+                          }
+               }
+}

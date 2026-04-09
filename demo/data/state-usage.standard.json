@@ -1,0 +1,31 @@
+{
+  "format": "leaflet.us-states/standard-usage",
+  "version": 1,
+  "states": {
+    "FL": {
+      "color": "#e67e22",
+      "label": "Florida",
+      "labelColor": "#ffffff",
+      "stateFacts": {
+        "capital": "Tallahassee",
+        "nickname": "The Sunshine State",
+        "population": "22.6M"
+      }
+    },
+    "GA": {
+      "color": "#16a085",
+      "label": "Georgia",
+      "labelColor": "#ffffff",
+      "stateFacts": {
+        "capital": "Atlanta",
+        "nickname": "The Peach State",
+        "population": "11.0M"
+      }
+    }
+  },
+  "metadata": {
+    "author": "example",
+    "created": "2026-04-08",
+    "notes": "Standard usage format. Extra fields are allowed."
+  }
+}

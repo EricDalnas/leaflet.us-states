@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2024 US Presidential Election Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="../src/leaflet.us-states.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6f8;
+      color: #1f2937;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      background: #0f172a;
+      color: #e5e7eb;
+      padding: 12px 16px;
+      border-bottom: 1px solid #1f2937;
+    }
+    header h1 { font-size: 1.05rem; margin-bottom: 4px; }
+    header p { font-size: 0.82rem; color: #cbd5e1; }
+    #controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      padding: 10px 16px;
+      background: #111827;
+      border-bottom: 1px solid #1f2937;
+      color: #cbd5e1;
+      font-size: 0.78rem;
+    }
+    .ctrl-group { display: flex; align-items: center; gap: 6px; }
+    .ctrl-group label { white-space: nowrap; }
+    .ctrl-group select {
+      background: #1f2937;
+      color: #f9fafb;
+      border: 1px solid #334155;
+      border-radius: 4px;
+      padding: 4px 6px;
+      font-size: 0.78rem;
+    }
+    #map { flex: 1; }
+    #status {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 6px 16px;
+      border-top: 1px solid #1f2937;
+      font-size: 0.72rem;
+    }
+    .legend {
+      background: rgba(15, 23, 42, 0.94);
+      color: #e2e8f0;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 0.75rem;
+      line-height: 1.55;
+      min-width: 220px;
+    }
+    .legend h4 { color: #f8fafc; margin-bottom: 6px; font-size: 0.8rem; }
+    .legend-row { display: flex; align-items: center; gap: 7px; }
+    .swatch { width: 13px; height: 13px; border-radius: 2px; flex-shrink: 0; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>2024 Presidential Election Map (Standard Usage Binding)</h1>
+  <p>Popups include winner, runner-up, vote totals, and percentages. Labels auto-declutter by zoom.</p>
+</header>
+
+<div id="controls">
+  <div class="ctrl-group">
+    <label>Base layer:</label>
+    <select id="baseLayerMode">
+      <option value="nolabels">No-label basemap</option>
+      <option value="none">States only</option>
+    </select>
+  </div>
+</div>
+
+<div id="map"></div>
+<div id="status">Loading election data…</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../../leaflet.regions/src/leaflet.regions.js"></script>
+<script src="../src/leaflet.us-states.js"></script>
+<script>
+  var PARTY_RED = '#C85a5a';
+  var PARTY_BLUE = '#5a78c8';
+
+  var US_VIEW_BOUNDS = L.latLngBounds([
+    [15, -170],
+    [72, -52]
+  ]);
+
+  var map = L.map('map', {
+    center: [39.5, -98.35],
+    zoom: 4,
+    minZoom: 3,
+    maxBounds: US_VIEW_BOUNDS,
+    maxBoundsViscosity: 1.0
+  });
+
+  var baseLayer = null;
+  function applyBaseLayerMode(mode) {
+    if (baseLayer) {
+      map.removeLayer(baseLayer);
+      baseLayer = null;
+    }
+    if (mode === 'nolabels') {
+      baseLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
+      }).addTo(map);
+    }
+  }
+
+  var statusEl = document.getElementById('status');
+
+  function formatVotes(n) {
+    if (typeof n !== 'number') return 'N/A';
+    return n.toLocaleString('en-US');
+  }
+
+  var legend = L.control({ position: 'bottomright' });
+  legend.onAdd = function () {
+    var div = L.DomUtil.create('div', 'legend');
+    div.id = 'legend-content';
+    div.innerHTML = '<h4>Election Results</h4>' +
+      '<div class="legend-row"><span class="swatch" style="background:' + PARTY_RED + '"></span> Republican winner</div>' +
+      '<div class="legend-row"><span class="swatch" style="background:' + PARTY_BLUE + '"></span> Democratic winner</div>' +
+      '<div class="legend-row"><span class="swatch" style="background:#7f8c8d"></span> Missing data</div>';
+    return div;
+  };
+  legend.addTo(map);
+
+  var electionLayer = null;
+
+  function buildOptions() {
+   
+    return {
+      geoJsonUrl: '../src/us-states-detailed.geojson',
+      borderColor: 'white',
+      color: function (feature, sd) {
+        if (sd && sd.party === 'Republican') return PARTY_RED;
+        if (sd && sd.party === 'Democratic') return PARTY_BLUE;
+        return '#7f8c8d';
+      },
+      labelColor: '#ffffff',
+      popupAction: 'click',
+      popupContent: function (feature, sd) {
+        var stateName = feature.properties.name || feature.properties.STUSPS || 'State';
+        if (!sd || !sd.candidates || sd.candidates.length < 2) {
+          return '<b>' + stateName + '</b><br>No election data found';
+        }
+
+        var c1 = sd.candidates[0];
+        var c2 = sd.candidates[1];
+        var facts = sd.stateFacts || null;
+
+        var html = '<b>' + stateName + '</b><br>' +
+          'Electoral Votes: <strong>' + (sd.electoralVotes !== undefined ? sd.electoralVotes : 'N/A') + '</strong><br><br>' +
+          '<strong>' + c1.name + '</strong> (' + c1.party + ')<br>' +
+          'Votes: ' + formatVotes(c1.votes) + ' (' + c1.pct + '%)<br><br>' +
+          '<strong>' + c2.name + '</strong> (' + c2.party + ')<br>' +
+          'Votes: ' + formatVotes(c2.votes) + ' (' + c2.pct + '%)<br><br>' +
+          'Total Votes: <strong>' + formatVotes(sd.totalVotes) + '</strong>';
+
+        if (facts) {
+          html += '<br><br>Capital: ' + (facts.capital || 'N/A') +
+            '<br>Nickname: ' + (facts.nickname || 'N/A');
+        }
+
+        return html;
+      }
+    };
+  }
+
+  function validateStatesPayload(payload) {
+    if (!payload || typeof payload !== 'object' || Array.isArray(payload)) {
+      throw new Error('Expected an object payload.');
+    }
+    if (!payload.states || typeof payload.states !== 'object' || Array.isArray(payload.states)) {
+      throw new Error('Expected payload.states to be an object map like { states: { FL: {...} } }.');
+    }
+    return payload;
+  }
+
+  function loadElectionLayer() {
+    if (electionLayer) {
+      map.removeLayer(electionLayer);
+      electionLayer = null;
+    }
+
+    statusEl.textContent = 'Loading election data…';
+    electionLayer = L.usStatesLayer(buildOptions());
+
+    electionLayer.on('rendered', function (evt) {
+      statusEl.textContent = 'Election map loaded · ' + evt.layerCount + ' layers · ' + new Date().toLocaleTimeString();
+    });
+
+    electionLayer.addTo(map);
+
+    fetch('./data/us-presidential-2024.json')
+      .then(function (response) {
+        if (!response.ok) throw new Error('Failed to load JSON: HTTP ' + response.status);
+        return response.json();
+      })
+      .then(function (payload) {
+        electionLayer.setData(validateStatesPayload(payload));
+      })
+      .catch(function (err) {
+        statusEl.textContent = 'Data error: ' + err.message;
+        statusEl.style.color = '#fca5a5';
+      });
+  }
+
+  document.getElementById('baseLayerMode').addEventListener('change', function () {
+    applyBaseLayerMode(this.value);
+  });
+
+  applyBaseLayerMode('nolabels');
+  loadElectionLayer();
+</script>
+</body>
+</html>

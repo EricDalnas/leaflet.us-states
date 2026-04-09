@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Single State Property Demo</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="../src/leaflet.us-states.css" />
+  <style>
+    html, body, #map { height: 100%; margin: 0; }
+    #panel {
+      position: absolute;
+      top: 10px;
+      left: 50px;
+      z-index: 1000;
+      background: rgba(255,255,255,0.95);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      max-width: 420px;
+    }
+    button { margin-top: 8px; }
+    code { font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div id="panel">
+    <div><strong>Single State Property Demo</strong></div>
+    <div>Updates one state via <code>layer.setState('RI', ...)</code>.</div>
+    <button id="apply">Apply Rhode Island update</button>
+  </div>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="../../leaflet.regions/src/leaflet.regions.js"></script>
+  <script src="../src/leaflet.us-states.js"></script>
+  <script>
+    var usViewBounds = L.latLngBounds([
+      [15, -170],
+      [72, -52]
+    ]);
+
+    var map = L.map('map', {
+      maxBounds: usViewBounds,
+      maxBoundsViscosity: 1.0
+    }).setView([39.5, -98.35], 4);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
+      subdomains: 'abcd',
+      maxZoom: 19
+    }).addTo(map);
+
+    var layer = L.usStatesLayer({
+      geoJsonUrl: '../src/us-states-detailed.geojson',
+      color: '#3498db',
+      popupAction: 'click',
+      popupContent: function (feature, sd) {
+        if (sd && sd.popupContent) return sd.popupContent;
+        return '<b>' + (feature.properties.name || 'State') + '</b>';
+      }
+    }).addTo(map);
+
+    document.getElementById('apply').addEventListener('click', function () {
+      layer.setState('RI', {
+        color: 'rgba(239, 68, 68, 0.55)',
+        borderColor: '#7f1d1d',
+        label: 'RI',
+        labelColor: '#ffffff',
+        popupContent: '<b>Rhode Island</b><br>Changed with layer.setState(\'RI\', ...)',
+        stateFacts: {
+          capital: 'Providence',
+          nickname: 'The Ocean State'
+        }
+      });
+    });
+  </script>
+</body>
+</html>

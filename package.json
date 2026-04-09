@@ -1,0 +1,33 @@
+{
+  "name": "leaflet.us-states",
+  "version": "0.1.0",
+  "description": "A Leaflet plugin for visualizing, styling, and binding data to US states using GeoJSON boundaries.",
+  "author": "Eric D",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricDalnas/leaflet.us-states.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EricDalnas/leaflet.us-states/issues"
+  },
+  "homepage": "https://github.com/EricDalnas/leaflet.us-states#readme",
+  "main": "src/leaflet.us-states.js",
+  "files": [
+    "src",
+    "demo",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "npx serve . -l 3000"
+  },
+  "sideEffects": false,
+  "keywords": ["leaflet", "us-states", "geojson", "map"],
+  "license": "MIT",
+  "dependencies": {
+    "leaflet.regions": "^0.1.0"
+  },
+  "peerDependencies": {
+    "leaflet": ">=1.0.0"
+  }
+}
