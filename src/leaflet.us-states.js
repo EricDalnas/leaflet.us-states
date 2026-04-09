@@ -14,9 +14,6 @@
 
   // ── Helpers ──────────────────────────────────────────────────────────────────
 
-  /**
-   * Normalize anything to an uppercase string so state keys are consistent.
-   */
   function toUpperSafe(val) {
     return (val === null || val === undefined) ? '' : String(val).toUpperCase();
   }

@@ -165,28 +165,14 @@ layer.refresh();
 
 ## Demo Pages
 
-- **[demo/index.html](demo/index.html)** — Direct state mutation demo. Updates a state's color, border, and label using `states['RI']` object access and `refresh()`.
-- **[demo/single-state-property.html](demo/single-state-property.html)** — Single state update demo. Shows the `setState('RI', ...)` helper method for targeted per-state changes.
+- **[demo/index.html](demo/index.html)** — Simple example. Updates one state's color, border, and label using `layer.setState('RI', ...)` and shows a click popup.
 - **[demo/standard-json-binding.html](demo/standard-json-binding.html)** — Standard JSON data binding demo. Loads per-state data (colors, labels, state facts) from a JSON file.
 - **[demo/2024Election.html](demo/2024Election.html)** — 2024 US presidential election map. Full state-by-state results with candidate vote counts and percentage popups.
+- **[demo/choropleth.html](demo/choropleth.html)** — Population density choropleth. Colors each state by 2020 US Census density using a 5-tier color scale.
 
 ## Choropleth example
 
-```js
-L.usStatesLayer({
-  color: function (feature) {
-    var d = feature.properties.density;
-    return d > 600 ? '#253494' :
-           d > 300 ? '#2c7fb8' :
-           d > 100 ? '#41b6c4' :
-           d > 20  ? '#a1dab4' : '#ffffcc';
-  },
-  popupContent: function (feature) {
-    return feature.properties.name + '<br>Density: ' +
-           feature.properties.density + ' / mi²';
-  }
-}).addTo(map);
-```
+See **[demo/choropleth.html](demo/choropleth.html)** for a working population density choropleth using 2020 US Census data bundled with the plugin.
 
 ## GeoJSON source
 

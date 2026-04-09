@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>US States Choropleth — Population Density</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="../src/leaflet.us-states.css" />
+  <style>
+    html, body, #map { height: 100%; margin: 0; }
+    #panel {
+      position: absolute;
+      top: 10px;
+      left: 50px;
+      z-index: 1000;
+      background: rgba(255,255,255,0.95);
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-family: Segoe UI, Arial, sans-serif;
+      font-size: 13px;
+    }
+    #legend {
+      position: absolute;
+      bottom: 30px;
+      right: 16px;
+      z-index: 1000;
+      background: rgba(255,255,255,0.95);
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-family: Segoe UI, Arial, sans-serif;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+    .legend-swatch {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 6px;
+      vertical-align: middle;
+      border: 1px solid #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div id="panel"><strong>Population Density Choropleth</strong><br/>2020 US Census &bull; people per mi&sup2;</div>
+  <div id="legend">
+    <div><span class="legend-swatch" style="background:#253494"></span>&gt; 600</div>
+    <div><span class="legend-swatch" style="background:#2c7fb8"></span>301 – 600</div>
+    <div><span class="legend-swatch" style="background:#41b6c4"></span>101 – 300</div>
+    <div><span class="legend-swatch" style="background:#a1dab4"></span>21 – 100</div>
+    <div><span class="legend-swatch" style="background:#ffffcc"></span>0 – 20</div>
+  </div>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="../../leaflet.regions/src/leaflet.regions.js"></script>
+  <script src="../src/leaflet.us-states.js"></script>
+  <script>
+    var usViewBounds = L.latLngBounds([[15, -170], [72, -52]]);
+
+    var map = L.map('map', {
+      maxBounds: usViewBounds,
+      maxBoundsViscosity: 1.0
+    }).setView([39.5, -98.35], 4);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
+      subdomains: 'abcd',
+      maxZoom: 19
+    }).addTo(map);
+
+    function densityColor(d) {
+      return d > 600 ? '#253494' :
+             d > 300 ? '#2c7fb8' :
+             d > 100 ? '#41b6c4' :
+             d > 20  ? '#a1dab4' : '#ffffcc';
+    }
+
+    L.usStatesLayer({
+      geoJsonUrl: '../src/us-states.geojson',
+      color: function (feature) {
+        return densityColor(feature.properties.density || 0);
+      },
+      borderColor: '#555',
+      fillOpacity: 0.85,
+      label: '',
+      popupAction: 'click',
+      popupContent: function (feature) {
+        var p = feature.properties;
+        return '<b>' + p.name + '</b><br/>Density: ' + (p.density || 'N/A') + ' / mi&sup2;';
+      }
+    }).addTo(map);
+  </script>
+</body>
+</html>

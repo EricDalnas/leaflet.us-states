@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Single State Property Demo</title>
+  <title>leaflet.us-states — Simple Example</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="../src/leaflet.us-states.css" />
   <style>
@@ -27,9 +27,9 @@
 </head>
 <body>
   <div id="panel">
-    <div><strong>Single State Property Demo</strong></div>
-    <div>Updates one state via <code>layer.setState('RI', ...)</code>.</div>
-    <button id="apply">Apply Rhode Island update</button>
+    <div><strong>Simple Example</strong></div>
+    <div>Updates one state via <code>layer.setState('KY', ...)</code>.</div>
+    <button id="apply">Apply Kentucky update</button>
   </div>
   <div id="map"></div>
 
@@ -64,15 +64,15 @@
     }).addTo(map);
 
     document.getElementById('apply').addEventListener('click', function () {
-      layer.setState('RI', {
-        color: 'rgba(239, 68, 68, 0.55)',
+      layer.setState('KY', {
+        color: 'rgba(255, 10, 10, 0.75)',
         borderColor: '#7f1d1d',
-        label: 'RI',
+        label: 'KY',
         labelColor: '#ffffff',
-        popupContent: '<b>Rhode Island</b><br>Changed with layer.setState(\'RI\', ...)',
+        popupContent: '<b>Kentucky</b><br>Changed with layer.setState(\'KY\', ...)',
         stateFacts: {
-          capital: 'Providence',
-          nickname: 'The Ocean State'
+          capital: 'Frankfort',
+          nickname: 'The Bluegrass State'
         }
       });
     });
