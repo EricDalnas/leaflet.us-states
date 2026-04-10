@@ -207,11 +207,26 @@
         layer.bindPopup(popupContent, { maxWidth: 300 });
 
         if (popupAction === 'hover') {
-          layer.on('mouseover', function (e) {
-            this.openPopup(e.latlng);
+          var closeTimer = null;
+          function cancelClose() {
+            if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+          }
+          function scheduleClose(target) {
+            closeTimer = setTimeout(function () { target.closePopup(); }, 200);
+          }
+          layer.on('mouseover', function () {
+            cancelClose();
+            var center = this.getBounds ? this.getBounds().getCenter() : null;
+            if (center) this.getPopup().setLatLng(center);
+            this.openPopup();
           });
-          layer.on('mouseout', function () {
-            this.closePopup();
+          layer.on('mouseout', function () { scheduleClose(this); });
+          layer.on('popupopen', function (e) {
+            var el = e.popup.getElement();
+            if (el) {
+              L.DomEvent.on(el, 'mouseover', cancelClose);
+              L.DomEvent.on(el, 'mouseout', function () { scheduleClose(layer); });
+            }
           });
         }
       }
