@@ -28,8 +28,9 @@
 <body>
   <div id="panel">
     <div><strong>Simple Example</strong></div>
-    <div>Updates one state via <code>layer.setState('KY', ...)</code>.</div>
-    <button id="apply">Apply Kentucky update</button>
+    <div>Highlight a state via direct property access:<br/><code>states["KY"].color = "red"</code></div>
+    <button id="apply">Highlight Kentucky</button>
+    <button id="reset" style="margin-left:6px">Reset</button>
   </div>
   <div id="map"></div>
 
@@ -57,24 +58,24 @@
       geoJsonUrl: '../src/us-states-detailed.geojson',
       color: '#3498db',
       popupAction: 'click',
-      popupContent: function (feature, sd) {
-        if (sd && sd.popupContent) return sd.popupContent;
+      popupContent: function (feature) {
         return '<b>' + (feature.properties.name || 'State') + '</b>';
       }
     }).addTo(map);
 
+    var states = layer.getStates();
+
     document.getElementById('apply').addEventListener('click', function () {
-      layer.setState('KY', {
-        color: 'rgba(255, 10, 10, 0.75)',
-        borderColor: '#7f1d1d',
-        label: 'KY',
-        labelColor: '#ffffff',
-        popupContent: '<b>Kentucky</b><br>Changed with layer.setState(\'KY\', ...)',
-        stateFacts: {
-          capital: 'Frankfort',
-          nickname: 'The Bluegrass State'
-        }
-      });
+      states['KY'] = states['KY'] || {};
+      states['KY'].color = 'red';
+      states['KY'].label = 'KY';
+      states['KY'].popupContent = '<b>Kentucky</b><br/>Highlighted via <code>states["KY"].color = "red"</code>';
+      layer.refresh();
+    });
+
+    document.getElementById('reset').addEventListener('click', function () {
+      delete states['KY'];
+      layer.refresh();
     });
   </script>
 </body>

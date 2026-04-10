@@ -2,7 +2,6 @@
 
 A simple Leaflet control for US states.
 
-It is designed for hobbyist use:
 - one state key format: `RI`, `TX`, `CA`
 - easy JSON binding
 - easy direct access like `states["RI"].color = "red"`
@@ -165,7 +164,7 @@ layer.refresh();
 
 ## Demo Pages
 
-- **[demo/index.html](demo/index.html)** — Simple example. Updates one state's color, border, and label using `layer.setState('RI', ...)` and shows a click popup.
+- **[demo/index.html](demo/index.html)** — Simple example. Highlights Kentucky using direct property access — `states["KY"].color = "red"` — and `refresh()`.
 - **[demo/standard-json-binding.html](demo/standard-json-binding.html)** — Standard JSON data binding demo. Loads per-state data (colors, labels, state facts) from a JSON file.
 - **[demo/2024Election.html](demo/2024Election.html)** — 2024 US presidential election map. Full state-by-state results with candidate vote counts and percentage popups.
 - **[demo/choropleth.html](demo/choropleth.html)** — Population density choropleth. Colors each state by 2020 US Census density using a 5-tier color scale.
