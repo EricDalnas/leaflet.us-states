@@ -1,11 +1,13 @@
 # leaflet.us-states
 
-A simple Leaflet control for US states.
+A simple Leaflet plugin for visualizing and styling US states with GeoJSON boundaries, data binding, and interactive popups.
 
-- one state key format: `RI`, `TX`, `CA`
-- easy JSON binding
-- easy direct access like `states["RI"].color = "red"`
-- small focused demos
+## Demo Pages
+
+- **[Simple Example](https://ericdalnas.github.io/leaflet.us-states/demo/index.html)** — Highlights Kentucky using direct property access — `states["KY"].color = "red"` — and `refresh()`.
+- **[Standard JSON Binding](https://ericdalnas.github.io/leaflet.us-states/demo/standard-json-binding.html)** — Loads per-state data (colors, labels, state facts) from a JSON file.
+- **[2024 Election Map](https://ericdalnas.github.io/leaflet.us-states/demo/2024Election.html)** — Full state-by-state presidential results with candidate vote counts and percentage popups.
+- **[Population Density Choropleth](https://ericdalnas.github.io/leaflet.us-states/demo/choropleth.html)** — Colors each state by 2020 US Census density using a 5-tier color scale.
 
 ## Quick start
 
@@ -161,13 +163,6 @@ layer.setState('RI', { color: 'red' });
 // Re-render after direct mutation
 layer.refresh();
 ```
-
-## Demo Pages
-
-- **[demo/index.html](demo/index.html)** — Simple example. Highlights Kentucky using direct property access — `states["KY"].color = "red"` — and `refresh()`.
-- **[demo/standard-json-binding.html](demo/standard-json-binding.html)** — Standard JSON data binding demo. Loads per-state data (colors, labels, state facts) from a JSON file.
-- **[demo/2024Election.html](demo/2024Election.html)** — 2024 US presidential election map. Full state-by-state results with candidate vote counts and percentage popups.
-- **[demo/choropleth.html](demo/choropleth.html)** — Population density choropleth. Colors each state by 2020 US Census density using a 5-tier color scale.
 
 ## Choropleth example
 
