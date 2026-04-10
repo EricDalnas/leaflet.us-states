@@ -4,7 +4,7 @@ A simple Leaflet plugin for visualizing and styling US states with GeoJSON bound
 
 ## Demo Pages
 
-- **[Simple Example](https://ericdalnas.github.io/leaflet.us-states/demo/index.html)** — Highlights Kentucky using direct property access — `states["KY"].color = "red"` — and `refresh()`.
+- **[Simple Example](https://ericdalnas.github.io/leaflet.us-states/demo/index.html)** — Basic usage example.
 - **[Standard JSON Binding](https://ericdalnas.github.io/leaflet.us-states/demo/standard-json-binding.html)** — Loads per-state data (colors, labels, state facts) from a JSON file.
 - **[2024 Election Map](https://ericdalnas.github.io/leaflet.us-states/demo/2024Election.html)** — Full state-by-state presidential results with candidate vote counts and percentage popups.
 - **[Population Density Choropleth](https://ericdalnas.github.io/leaflet.us-states/demo/choropleth.html)** — Colors each state by 2020 US Census density using a 5-tier color scale.
