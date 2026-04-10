@@ -73,11 +73,11 @@
       popupAction: 'click',
       popupContent: function (feature, sd) {
         var stateName = feature.properties.name || 'State';
-        if (sd && sd.stateFacts) {
+        if (sd && sd.capital) {
           return '<b>' + stateName + '</b><br>' +
-                 'Capital: ' + (sd.stateFacts.capital || 'N/A') + '<br>' +
-                 'Nickname: ' + (sd.stateFacts.nickname || 'N/A') + '<br>' +
-                 'Population: ' + (sd.stateFacts.population || 'N/A');
+                 'Capital: ' + (sd.capital || 'N/A') + '<br>' +
+                 'Nickname: ' + (sd.nickname || 'N/A') + '<br>' +
+                 'Population: ' + (sd.population || 'N/A');
         }
         return '<b>' + stateName + '</b><br>No standard usage data in JSON';
       }

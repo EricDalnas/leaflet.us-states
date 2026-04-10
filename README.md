@@ -81,10 +81,8 @@ Required format:
       "color": "#ff0000",
       "label": "Florida",
       "labelColor": "#ffffff",
-      "stateFacts": {
-        "capital": "Tallahassee",
-        "nickname": "The Sunshine State"
-      }
+      "capital": "Tallahassee",
+      "nickname": "The Sunshine State"
     }
   },
   "metadata": {
@@ -114,9 +112,8 @@ Extra top-level fields are allowed, but state entries must live under `states`.
 | `label` | `string` | Label text for this state. |
 | `popupContent` | `string` | Popup HTML content for the state. |
 | `fillOpacity` | `number` | Optional per-state fill opacity value. |
-| `stateFacts` | `object` | Optional extra info (capital, nickname, etc.) for popup templates. |
 
-Use `fillOpacity` when you want predictable opacity control.
+Extra fields are allowed — put anything you need (population, capital, region, etc.) directly on the state entry and access it via `sd` in your `popupContent` function.
 
 Label styles live in `src/leaflet.us-states.css`. Override `.us-states-label` in your app stylesheet if you want a different look.
 

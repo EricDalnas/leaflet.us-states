@@ -202,11 +202,9 @@
                                                      "party":  "Democratic"
                                                  }
                                              ],
-                              "stateFacts":  {
-                                                 "population":  "22.6M",
-                                                 "nickname":  "The Sunshine State",
-                                                 "capital":  "Tallahassee"
-                                             }
+                              "population":  "22.6M",
+                              "nickname":  "The Sunshine State",
+                              "capital":  "Tallahassee"
                           },
                    "GA":  {
                               "winner":  "Donald Trump",
@@ -227,11 +225,9 @@
                                                      "party":  "Democratic"
                                                  }
                                              ],
-                              "stateFacts":  {
-                                                 "population":  "11.0M",
-                                                 "nickname":  "The Peach State",
-                                                 "capital":  "Atlanta"
-                                             }
+                              "population":  "11.0M",
+                              "nickname":  "The Peach State",
+                              "capital":  "Atlanta"
                           },
                    "HI":  {
                               "winner":  "Kamala Harris",

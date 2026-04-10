@@ -163,7 +163,6 @@
 
         var c1 = sd.candidates[0];
         var c2 = sd.candidates[1];
-        var facts = sd.stateFacts || null;
 
         var html = '<b>' + stateName + '</b><br>' +
           'Electoral Votes: <strong>' + (sd.electoralVotes !== undefined ? sd.electoralVotes : 'N/A') + '</strong><br><br>' +
@@ -173,9 +172,9 @@
           'Votes: ' + formatVotes(c2.votes) + ' (' + c2.pct + '%)<br><br>' +
           'Total Votes: <strong>' + formatVotes(sd.totalVotes) + '</strong>';
 
-        if (facts) {
-          html += '<br><br>Capital: ' + (facts.capital || 'N/A') +
-            '<br>Nickname: ' + (facts.nickname || 'N/A');
+        if (sd.capital) {
+          html += '<br><br>Capital: ' + sd.capital +
+            '<br>Nickname: ' + (sd.nickname || 'N/A');
         }
 
         return html;
