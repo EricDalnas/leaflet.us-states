@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>leaflet.us-states — Simple Example</title>
+  <title>leaflet.us-states — Simple Usage</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="../src/leaflet.us-states.css" />
   <style>
@@ -14,39 +14,32 @@
       left: 50px;
       z-index: 1000;
       background: rgba(255,255,255,0.95);
-      border: 1px solid #ccc;
+      border: 1px solid #d1d5db;
       border-radius: 8px;
-      padding: 10px;
-      font-family: Arial, sans-serif;
+      padding: 12px 14px;
+      font-family: Segoe UI, Arial, sans-serif;
       font-size: 13px;
-      max-width: 420px;
+      max-width: 280px;
     }
-    button { margin-top: 8px; }
-    code { font-size: 12px; }
+    #panel code {
+      display: block;
+      background: #f3f4f6;
+      border-radius: 4px;
+      padding: 6px 8px;
+      margin-top: 8px;
+      font-size: 12px;
+      white-space: pre;
+    }
   </style>
 </head>
 <body>
-  <div id="panel">
-    <div><strong>Simple Example</strong></div>
-    <div>Highlight a state via direct property access:<br/><code>states["KY"].color = "red"</code></div>
-    <button id="apply">Highlight Kentucky</button>
-    <button id="reset" style="margin-left:6px">Reset</button>
-  </div>
   <div id="map"></div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="../vendor/leaflet.regions.js"></script>
   <script src="../src/leaflet.us-states.js"></script>
   <script>
-    var usViewBounds = L.latLngBounds([
-      [15, -170],
-      [72, -52]
-    ]);
-
-    var map = L.map('map', {
-      maxBounds: usViewBounds,
-      maxBoundsViscosity: 1.0
-    }).setView([39.5, -98.35], 4);
+    var map = L.map('map').setView([35, -98], 5);
 
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
@@ -54,29 +47,17 @@
       maxZoom: 19
     }).addTo(map);
 
-    var layer = L.usStatesLayer({
-      geoJsonUrl: '../src/us-states-detailed.geojson',
-      color: '#3498db',
-      popupAction: 'click',
-      popupContent: function (feature) {
-        return '<b>' + (feature.properties.name || 'State') + '</b>';
+    L.usStatesLayer({
+      geoJsonUrl: '../src/us-states.geojson',
+      defaultVisible: false,
+      data: {
+        states: {
+          KS: { name: 'Kansas',   color: '#3b82f6' },
+          OK: { name: 'Oklahoma', color: '#22c55e' },
+          TX: { name: 'Texas',    color: '#ef4444', popupContent: '<b>Texas</b><br/>The Lone Star State'}
+        }
       }
     }).addTo(map);
-
-    var states = layer.getStates();
-
-    document.getElementById('apply').addEventListener('click', function () {
-      states['KY'] = states['KY'] || {};
-      states['KY'].color = 'red';
-      states['KY'].label = 'KY';
-      states['KY'].popupContent = '<b>Kentucky</b><br/>Highlighted via <code>states["KY"].color = "red"</code>';
-      layer.refresh();
-    });
-
-    document.getElementById('reset').addEventListener('click', function () {
-      delete states['KY'];
-      layer.refresh();
-    });
   </script>
 </body>
 </html>

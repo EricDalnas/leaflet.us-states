@@ -196,6 +196,7 @@
 
     _configureFeature: function (feature, layer) {
       var sd = this._dataForFeature(feature);
+      if (this._isFeatureHidden(sd)) return;
 
       var popupContent = (sd.popupContent !== undefined && sd.popupContent !== null)
         ? sd.popupContent
@@ -204,6 +205,8 @@
       var popupAction = this.options.popupAction;
 
       if (popupContent && popupAction) {
+        var contentStr = typeof popupContent === 'string' ? popupContent.trim() : popupContent;
+        if (!contentStr) return;
         layer.bindPopup(popupContent, { maxWidth: 300 });
 
         if (popupAction === 'hover') {
