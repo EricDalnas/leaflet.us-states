@@ -66,7 +66,7 @@ Use the 2-letter state abbreviation everywhere.
 | `data` | `Object \| string \| null` | `null` | State data object or URL. Required shape: `{ states: { RI: { ... } } }`. |
 | `labelMinZoom` | `number \| null` | `4` | Hide labels below this zoom level. |
 | `labelAbbrBelowZoom` | `number \| null` | `5` | Show state abbreviations below this zoom level (and above `labelMinZoom`). |
-| `geoJsonUrl` | `string` | `src/us-states.geojson` | URL to fetch the GeoJSON from. Defaults to the bundled normalized states file. |
+| `geoJsonUrl` | `string` | `src/us-states.geojson` | URL to the GeoJSON file that defines US state boundary polygons. Defaults to the bundled simplified states file. Override with `src/us-states-detailed.geojson` for higher-fidelity coastlines, or supply your own. Ignored if `geoJson` is provided inline. |
 
 ## Per-state data binding
 
