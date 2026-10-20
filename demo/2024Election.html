@@ -115,12 +115,12 @@
       baseLayer = null;
     }
     if (mode === 'nolabels') {
-      baseLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
-        subdomains: 'abcd',
-        maxZoom: 19
-      }).addTo(map);
-    }
+      baseLayer = L.tileLayer('https://basemap.queeniemella.cc/tiles/countries/{z}/{x}/{y}.png',
+        {
+          attribution: '&copy; OpenStreetMap contributors',
+          maxZoom: 20
+        }
+      ).addTo(map);
   }
 
   var statusEl = document.getElementById('status');
