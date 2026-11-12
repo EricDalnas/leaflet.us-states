@@ -9,16 +9,6 @@ A simple Leaflet plugin for visualizing and styling US states with GeoJSON bound
 - **[2024 Election Map](https://ericdalnas.github.io/leaflet.us-states/demo/2024Election.html)** — Full state-by-state presidential results with candidate vote counts and percentage popups.
 - **[Population Density Choropleth](https://ericdalnas.github.io/leaflet.us-states/demo/choropleth.html)** — Colors each state by 2020 US Census density using a 5-tier color scale.
 
-## Quick start
-
-Open one of the demo files in `demo/`.
-
-```bash
-# Optional: serve locally (no Node.js required)
-python -m http.server 3000
-# then open: http://localhost:3000/leaflet.us-states/demo/index.html
-```
-
 ## Simple rule
 
 Use the 2-letter state abbreviation everywhere.
